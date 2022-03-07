@@ -1,15 +1,47 @@
-name: cmaps
-channels:
-  - conda-forge
-  - pyviz
-  - defaults
-dependencies:
-  - numpy=1.18.1
-  - panel=0.9.6
-  - bokeh=2.1.1
-  - param=1.9.3
-  - python=3.7.7
-  - jupyter-panel-proxy
-  - scipy=1.4.1
-  - scikit-image=0.16.2
-  - colorcet=2.0.2
+#name: cmaps
+#channels:
+ # - conda-forge
+ # - pyviz
+#  - defaults
+#dependencies:
+  #- numpy=1.18.1
+  #- panel=0.9.6
+  #- bokeh=2.1.1
+  #- param=1.9.3
+  #- python=3.7.7
+  #- jupyter-panel-proxy
+  #- scipy=1.4.1
+  #- scikit-image=0.16.2
+  #- colorcet=2.0.2
+  
+  
+name: nyc_taxi
+description: Plotting the NYC taxi dataset using Datashader.
+packages: &id001
+- python=3.7
+- notebook=5.7.8
+- ipykernel=5.1.0
+- nomkl
+- bokeh=1.1.0
+- datashader=0.7.0
+- fastparquet=0.3.0
+- holoviews=1.12.3
+- numpy=1.16.3
+- pandas=0.24.2
+- panel=0.6.0
+- python-snappy=0.5.4
+- tornado<6
+dependencies: *id001
+commands:
+  dashboard:
+    unix: panel serve dashboard.ipynb
+    supports_http_options: true
+  notebooks:
+    notebook: .
+downloads:
+  DATA:
+    url: https://s3.amazonaws.com/datashader-data/nyc_taxi_wide.parq
+    description: NYC Taxi Data
+    filename: data/nyc_taxi_wide.parq
+env_specs:
+  default: {}
