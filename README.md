@@ -22,7 +22,7 @@ conda env create -f environment.yml
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rakibulinux/Colormap-distorsions-Panel-app/HEAD)
 
 ### To launch the app directly from server, use the link below ####
-[Launch app](https://mybinder.org/v2/gh/rakibulinux/Colormap-distorsions-Panel-app/master?urlpath=%2Fpanel%2FDemonstrate_colormap_distortions_interactive_Panel)
+[Launch app](https://mybinder.org/v2/gh/rakibulinux/Colormap-distorsions-Panel-app/master?urlpath=%2Fpanel%2Fnyc_taxi_v3)
 
 
 ### How to use the app ####
